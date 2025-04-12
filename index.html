@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prerna's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 48);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(13, 13, 75);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .left {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        nav .right ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav .right ul li {
+            margin: 0 15px;
+        }
+
+        nav .right ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav .right ul li a:hover {
+            color: #9b29c1;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            min-height: 90vh;
+            background-color: rgb(2, 2, 44);
+        }
+
+        .home-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .text-section {
+            flex: 1;
+            min-width: 300px;
+            color: white;
+            text-align: left;
+        }
+
+        .text-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .text-section p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 150px;
+        }
+
+        .image-section img {
+            width: 380px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+
+        .firstSection h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .firstSection p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.5;
+            margin: 0 auto;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .buttons .btn {
+            padding: 12px 30px;
+            background-color: #9b29c1;
+            color: white;
+            border: 2px solid #9b29c1;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buttons .btn:hover {
+            background-color: white;
+            color: #9b29c1;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section ul {
+            list-style: disc;
+            padding-left: 40px;
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+
+        footer .social-links a:hover {
+            color: #9b29c1;
+        }
+
+        /* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav .left {
+        font-size: 1.4rem;
+    }
+
+    nav .right ul {
+        display: none;
+    }
+
+    .firstSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        flex-direction: column;
+    }
+
+    .text-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-section img {
+        width: 300px;
+        height: auto;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p, section ul {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .left {
+        font-size: 1.2rem;
+    }
+
+    .text-section h1 {
+        font-size: 2rem;
+    }
+
+    .buttons .btn {
+        font-size: 1rem;
+    }
+
+    .home-content {
+        padding: 40px 20px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Prerna's Portfolio</div>
+            <div class="right">
+                <!-- <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul> -->
+                <ul class="footer-links">
+                    <li>
+                      <i class="fas fa-house footer-icon"></i>
+                      <a href="#home">Home</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-user footer-icon"></i>
+                      <a href="#about">About</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-briefcase footer-icon"></i>
+                      <a href="#services">Services</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-envelope footer-icon"></i>
+                      <a href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                  
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="firstSection">
+            <div class="home-content">
+                <div class="text-section">
+                    <h1>Hi, I'm <span style="color:#9b29c1;">Prerna Agrawal</span></h1>
+                    <p>I am dedicated to applying my skills in robotics, automation, and software development to solve real-world problems.</p>
+                    <div class="buttons">
+                        <a href="https://www.linkedin.com/in/prerna-agrawal-3a08802a5" target="_blank">
+                            <button class="btn"><i class="fab fa-linkedin"></i> LinkedIn</button>
+                        </a>
+                        <a href="https://github.com/Prernaagrawal1" target="_blank">
+                            <button class="btn"><i class="fab fa-github"></i> GitHub</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Prerna Gif" />
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a third-year Robotics and AI student at C.V. Raman Global University with a passion for automation, AI, and software development. 
+                I’ve built robotic systems like a PLC-based conveyor and line follower robot, and developed AI applications using YOLOv8 and Lidar. 
+                I'm also enthusiastic about web development and constantly sharpening my skills in HTML, CSS, JS, and C++. 
+                My goal is to work on impactful tech innovations and secure a high-paying role in the industry.
+              </p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2 style="text-align: center;">What I Can Do</h2>
+            <p style="text-align: center;">I have a diverse skill set that allows me to contribute to both creative and technical projects:</p>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 30px;">
+              <div style="margin-bottom: 20px;">
+                <i class="fas fa-code" style="margin-right:10px;"></i>
+                Build modern and responsive websites using HTML, CSS, and JavaScript
+              </div>
+              <div style="margin-bottom: 20px;">
+                <i class="fas fa-robot" style="margin-right:10px;"></i>
+                Design and implement robotic systems and automation solutions
+              </div>
+              <div style="margin-bottom: 20px;">
+                <i class="fas fa-microchip" style="margin-right:10px;"></i>
+                Work with embedded systems and microcontrollers (like Arduino)
+              </div>
+              <div style="margin-bottom: 20px;">
+                <i class="fas fa-brain" style="margin-right:10px;"></i>
+                Develop AI-based applications such as object detection & tracking
+              </div>
+              <div style="margin-bottom: 20px;">
+                <i class="fas fa-laptop-code" style="margin-right:10px;"></i>
+                Solve data structures and algorithms problems using C++
+              </div>
+              <div style="margin-bottom: 20px;">
+                <i class="fas fa-pencil-ruler" style="margin-right:10px;"></i>
+                Design graphics, UI mockups, and user-friendly layouts
+              </div>
+              <div style="margin-bottom: 20px;">
+                <i class="fas fa-video" style="margin-right:10px;"></i>
+                Edit videos for content creation, presentations, or social media
+              </div>
+            </div>
+          </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you would like to discuss a project or collaboration, feel free to reach out to me via email or
+                LinkedIn!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/prerna-agrawal-3a08802a5" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Prernaagrawal1" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>© 2025 Prerna Agrawal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
